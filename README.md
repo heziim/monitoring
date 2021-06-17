@@ -23,5 +23,16 @@ docker-compose up -d
 This will spin up 2 containers, one with prometheus and one with grafana.  
 
 7. Varify you can access grafana at http://\<you-host-ip-address\>:3000  
+8. Varify you can access prome at http://\<you-host-ip-address\>:9090 
 >**Note:** Initial user and password are `admin\admin`. Please change the password and remember it!  
 
+
+
+--
+FOR GPU NODES
+
+DCGM INSTALL 
+https://developer.nvidia.com/dcgm
+
+run gpu-exporter
+docker run -d --gpus all --rm -p 9400:9400 nvcr.io/nvidia/k8s/dcgm-exporter:2.0.13-2.1.2-ubuntu18.04
