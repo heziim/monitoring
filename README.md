@@ -28,8 +28,8 @@ This will spin up 2 containers, one with prometheus and one with grafana.
 
 
 
---
-FOR GPU NODES
+
+** FOR GPU NODES:
 
 DCGM INSTALL 
 https://developer.nvidia.com/dcgm
