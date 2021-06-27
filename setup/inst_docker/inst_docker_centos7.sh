@@ -1,6 +1,4 @@
 #!/bin/bash
-# Created by Abraão Silva
-# Install docker in centos
 
 # Remove any old versions
 sudo yum remove docker docker-common docker-selinux docker-engine
