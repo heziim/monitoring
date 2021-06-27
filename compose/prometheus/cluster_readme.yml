@@ -1,0 +1,27 @@
+
+cat promethus.yml
+
+scrape_configs:
+  - job_name: 'cluster'
+    file_sd_configs:
+      - files:
+        - /etc/prometheus/endpoints/*.yml
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+
+-----------
+
+cat /etc/prometheus/endpoints/node-exporter.yml
+- targets: [n305:9100,n306:9100,n307:9100,n308:9100]
+  labels:
+    module: node-exporter
+    
+    
+-----------
+
+cat /etc/prometheus/endpoints/gpu-exporter.yml
+- targets: [n305:9400,n306:9400,n307:9400,n308:9400]
+  labels:
+    module: gpu-exporter
