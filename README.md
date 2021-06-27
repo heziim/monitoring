@@ -29,10 +29,11 @@ This will spin up 2 containers, one with prometheus and one with grafana.
 
 
 
-** FOR GPU NODES:
+FOR GPU NODES:
 
-DCGM INSTALL 
-https://developer.nvidia.com/dcgm
+1. DCGM INSTALL -> https://developer.nvidia.com/dcgm
 
-run gpu-exporter
+2. run gpu-exporter
+```shell
 docker run -d --gpus all --rm -p 9400:9400 nvcr.io/nvidia/k8s/dcgm-exporter:2.1.8-2.4.0-rc.3-ubuntu18.04
+```
